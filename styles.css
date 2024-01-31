@@ -1,0 +1,246 @@
+:root{
+    --white: #fff;
+    --text: #3f4250;
+    --pale: #f2ebe3;
+    --green: #3c8067;
+    --headertext: #1c232b;
+}
+
+*{
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: var(--pale);
+}
+
+#header-img{
+    width: 6rem;
+    object-fit: cover;
+}
+
+#nav-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+}
+
+.nav-links a{
+    text-decoration: none;
+    padding: 0 1rem;
+    color: var(--text);
+    font-size: 1.4rem;
+    cursor: pointer;
+    margin-bottom: 0.8rem;
+}
+
+.logo-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.the-product{
+    font-style: "montserrat";
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-left: 1rem;
+}
+
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+}
+
+section::before{
+    content: "";
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    margin: auto;
+}
+
+#email-input{
+    margin-top: 100px;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-style: "fraunces";
+    margin-bottom: 1rem;
+}
+
+input{
+    padding: 1.2rem 0.8rem;
+    font-size: 1.4rem;
+    border: 1px solid var(--green);
+    border-radius: 0.5rem;
+    outline: none;
+}
+
+#submit{
+    background-color: var(--green);
+    color: var(--white);
+    font-style: "fraunces";
+    cursor: pointer;
+}
+
+.icon{
+    color: var(--green);
+    margin-right: 3rem;
+}
+
+#features{
+    width: 100%;
+    text-align: left;
+    margin: auto;
+}
+
+.feature{
+    display: flex;
+    align-content: center;
+    margin: 2rem;
+    font-family: "montserrat";
+}
+
+#video{
+    width: 100%;
+}
+
+.product-img{
+    width: 100%;
+    height: 50rem;
+    margin: auto;
+    border: 1px solid var(--text);
+    border-radius: 1rem, 1rem, 0, 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.product1{
+    background-image: url("https://m.media-amazon.com/images/I/51ATZ+uPgfL.jpg");
+}
+
+.card{
+    background-color: var(--white);
+    border-radius: 1rem;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.inner-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+}
+.content{
+    font-family: "montserrat";
+    color: var(--text);
+    margin-bottom: 1fr;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1fr;
+}
+
+.new-price{
+    margin-right: 2rem;
+    font-size: 3rem;
+    font-family: "fraunces";
+    color: var(--green);
+}
+
+.old-price{
+    text-decoration: line-through;
+    color: var(--text);
+}
+
+.author{
+    font-family: "montserrat";
+    letter-spacing: 1rem;
+    color: var(--text);
+    text-transform: uppercase;
+}
+
+.header{
+    font-family: "fraunces";
+    margin: 10px 0;
+    color: var(--headertext);
+}
+
+.add{
+    background-color: var(--green);
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    padding: 1.5rem;
+    width: 100%;
+    color: var(--white);
+    font-family: "montserrat";
+    font-weight: 700;
+    margin-bottom: 1fr;
+}
+
+@media only screen and (min-width: 600px){
+    #nav-bar{
+        flex-direction: row;
+    }
+}
+
+@media only screen and (450px < width < 600px){
+    .card{
+        font-size: 0.85rem;
+    }
+    .product-img{
+        height: 450px;
+    }
+}
+
+@media only screen and (450px <= width){
+    .card{
+        display: flex;
+        max-width: 525px;
+    }
+    .inner-card{
+        width: 300px;
+        padding: 2rem;
+    }
+    .product-img{
+        width: 400px;
+        border-radius: 1rem 0 0 1rem;
+    }
+}
+
+@media only screen and (width > 1000px){
+    #video{
+        width: 70%;
+    }
+    .product-cards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
